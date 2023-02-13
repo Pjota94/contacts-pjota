@@ -13,7 +13,7 @@ Este é um projeto fullstack, para criação de contatos. Nele você pode criar 
 $ git clone git@github.com:Pjota94/contacts-pjota.git
 
 # 2º Abra o terminal e vá para a pasta back-end
-$ cd back-end
+$ cd Back
 
 # 3º Instale as dependências do projeto
 $ yarn install
@@ -29,7 +29,7 @@ $ yarn dev
 Com o servidor funcionando vamos iniciar o front!
 
 # 7º Abra um novo terminal e vá para a pasta front-end
-$ cd front-end
+$ cd Front
 
 # 7º Execute os comandos para instalar e iniciar a aplicação
 $ yarn install
