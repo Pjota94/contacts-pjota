@@ -10,6 +10,7 @@ const createUserService = async ({
   email,
   telefone,
   password,
+  foto,
 }: IUser): Promise<User> => {
   const userRepository = AppDataSource.getRepository(User);
 
@@ -32,6 +33,7 @@ const createUserService = async ({
     password: hashedPassword,
     email,
     telefone,
+    foto,
     createdAt: formatDate(),
   });
 

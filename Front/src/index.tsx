@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Toaster } from "react-hot-toast";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import Providers from "./Providers";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
@@ -10,7 +12,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Providers>
+        <Toaster position="top-center" reverseOrder={true} />
+        <App />
+      </Providers>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -5,7 +5,7 @@ import AppError from "../../errors/appErros";
 import { IUser } from "../../interfaces/user.interface";
 
 const updateUserService = async (
-  { nome, password, email, telefone }: IUser,
+  { nome, password, email, telefone, foto }: IUser,
   idOwner: string
 ): Promise<User> => {
   const userRepository = AppDataSource.getRepository(User);
@@ -27,6 +27,7 @@ const updateUserService = async (
     email: email ? email : findUser.email,
     password: password ? await hash(password, 10) : findUser.password,
     telefone: telefone ? telefone : findUser.telefone,
+    foto: foto ? foto : findUser.foto,
   });
 
   const user = await userRepository.findOneBy({ id: idOwner });

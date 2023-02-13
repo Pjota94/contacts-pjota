@@ -27,6 +27,9 @@ class User {
   telefone: number;
 
   @Column()
+  foto: string;
+
+  @Column()
   createdAt: string;
 
   @OneToMany(() => Contact, (contact) => contact.user)

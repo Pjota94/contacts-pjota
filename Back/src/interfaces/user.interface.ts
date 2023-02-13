@@ -4,4 +4,5 @@ export interface IUser {
   telefone: number;
   password: string;
   createdAt: string;
+  foto: string;
 }

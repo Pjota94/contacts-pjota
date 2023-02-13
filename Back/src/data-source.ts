@@ -4,6 +4,7 @@ import User from "./entities/users.entity";
 import Contact from "./entities/contacts.entity";
 import { initial1676156323513 } from "./migrations/1676156323513-initial";
 import { update1676158213707 } from "./migrations/1676158213707-update";
+import { update1676258268324 } from "./migrations/1676258268324-update";
 
 const AppDataSource = new DataSource(
   process.env.NODE_ENV === "test"
@@ -23,7 +24,11 @@ const AppDataSource = new DataSource(
         logging: true,
         synchronize: false,
         entities: [User, Contact],
-        migrations: [initial1676156323513, update1676158213707],
+        migrations: [
+          initial1676156323513,
+          update1676158213707,
+          update1676258268324,
+        ],
       }
 );
 
